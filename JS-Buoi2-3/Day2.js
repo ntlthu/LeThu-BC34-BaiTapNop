@@ -1,51 +1,52 @@
 // Bài 1:tính tiền lương nhân viên
-// SƠ ĐỒ 3 KHỐI
-//INPUT: luongMotNgay = 100000
-// soNgayLam
-// PROCESS: 1) Tìm cách lấy được input (hardcode)
-// 2) Tính lương: số ngày làm * lương 1 ngày
-// 3) In lương tính được ra màn hình
-//OUTPUT: tính tongLuong = luongMotNgay * soNgayLam
-console.log("Bài 1: Tính tiền lương nhân viên");
-var luongMotNgay = 100000;
-var soNgayLam = 28;
-var tongLuong = luongMotNgay * soNgayLam;
-console.log("Lương 1 ngày =", luongMotNgay, "VND");
-console.log("Số ngày làm việc = ", soNgayLam);
-console.log("Tổng Lương = ", tongLuong, "VND");
+document.getElementById("btnTinhLuong").onclick = function () {
+  //input:
+  var luongMotNgay = 100000;
+  var soNgayLam = document.getElementById("soNgayLam").value;
+  // process:
+  var tongLuong = luongMotNgay * soNgayLam;
+  //   Format VND
+  var currencyFormat = new Intl.NumberFormat("vn-VN");
+  var tongLuongVND = currencyFormat.format(tongLuong) + " VND";
+  //Hiển thị kết quả ra màn hình
+  var showLuong = "";
+  showLuong += "<p>Tổng lương là: </p>";
+  showLuong += "<p>" + tongLuongVND + "</p>";
+  document.getElementById("thongBaoLuong").innerHTML = showLuong;
+};
 
 //Bài 2: Tính giá trị trung bình
-//SƠ ĐỒ 3 KHỐI
-//INPUT: giả sử 5 số thực được nhập là: 20 , 21, 22, 23, 24, 25
-//PROCESS: 1) Đặt biến cho các số thực
-//2) Đặt biến công thức tính số thực var averageValue = (num1 + num2 + num3 + num4 + num5) / 5
-//3) In lương tính được ra màn hình
-//OUTPUT: averageValue = (num1 + num2 + num3 + num4 + num5) / 5
-
-console.log("Bài 2: Tính giá trị trung bình 5 số thực");
-console.log("5 số thực được nhập vào là: 20 , 21, 22, 23, 24, 25");
-var num1 = 20;
-var num2 = 21;
-var num3 = 22;
-var num4 = 23;
-var num5 = 25;
-var averageValue = (num1 + num2 + num3 + num4 + num5) / 5;
-console.log("Giá trị trung bình 5 số thực = ", averageValue);
+document.getElementById("giaTriTrungBinh").onclick = function () {
+  // input:
+  var num1 = document.getElementById("number1").value;
+  var num2 = document.getElementById("number2").value;
+  var num3 = document.getElementById("number3").value;
+  var num4 = document.getElementById("number4").value;
+  var num5 = document.getElementById("number5").value;
+  // process:
+  var averageValue =
+    (Number(num1) + Number(num2) + Number(num3) + Number(num4) + Number(num5)) /
+    5;
+  // Output ra screen:
+  var showAverage = "";
+  showAverage += "<p>Giá trị trung bình là: </p>";
+  showAverage += "<p>" + averageValue + "</p>";
+  document.getElementById("showAverage").innerHTML = showAverage;
+};
 
 //Bài 3: Quy đổi tiền
-//INPUT: Hardcode số tiền cần đổi = 10USD
-//Tỷ giá = 1USD = 23.500VND
-//PROCESS:
-//B1. Đặt biến USDrate, totalUSD
-//B2. Đặt biến công thức tính quy đổi = totalUSD * USDrate
-//OUTPUT: exchangeToVND = totalUSD * USDrate
+document.getElementById("moneyExchange").onclick = function () {
+  var USDrate = 23500;
+  var totalUSD = document.getElementById("amountOfMoney").value;
+  var exchangeToVND = totalUSD * USDrate;
+  var currencyFormat = new Intl.NumberFormat("vn-VN");
+  var totalMoneyVND = currencyFormat.format(exchangeToVND) + " VND";
 
-console.log("Bài 3: Quy đổi tiền");
-console.log("Tỷ giá 1USD = 23.500VND");
-var USDrate = 23500;
-var totalUSD = 10;
-var exchangeToVND = totalUSD * USDrate;
-console.log("10 USD đổi được:", exchangeToVND, "VND");
+  var showMoney = "";
+  showMoney += "<p>Số tiền quy đổi được là : </p>";
+  showMoney += "<p>" + totalMoneyVND + "</p>";
+  document.getElementById("totalMoney").innerHTML = showMoney;
+};
 
 //Bài 4: Tính diện tích, chu vi hình chữ nhật
 // INPUT: Hardcode chiều dài = 40, chiều rộng =30
