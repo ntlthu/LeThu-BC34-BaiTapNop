@@ -49,33 +49,33 @@ document.getElementById("moneyExchange").onclick = function () {
 };
 
 //Bài 4: Tính diện tích, chu vi hình chữ nhật
-// INPUT: Hardcode chiều dài = 40, chiều rộng =30
-// PROCESS:
-// B1. Đặt biến chieuDai, chieuRong
-// B2. Đặt biến công thức tính của dienTich = chieuDai * chieuRong
-// Đặt biến công thức tính của chuVi =  (chieuDai + chieuRong) * 2
-// OUTPUT: dienTich = chieuDai * chieuRong; chuVi = (chieuDai + chieuRong) * 2
-
-console.log("Bài 4: Tính diện tích, chu vi hình chữ nhật có:");
-var chieuDai = 40;
-var chieuRong = 30;
-var dienTich = chieuDai * chieuRong;
-var chuVi = (chieuDai + chieuRong) * 2;
-console.log("Chiều Dài = ", chieuDai);
-console.log("Chiều Rộng = ", chieuRong);
-console.log("Diện Tích = ", dienTich);
-console.log("Chu vi = ", chuVi);
+//Tính diện tích:
+document.getElementById("tinhDienTich").onclick = function () {
+  var chieuDai = document.getElementById("chieuDai").value;
+  var chieuRong = document.getElementById("chieuRong").value;
+  var dienTich = Number(chieuDai) * Number(chieuRong);
+  //show diện tích ra màn hình:
+  var showDienTich = "";
+  showDienTich = "Diện tích = " + dienTich;
+  document.getElementById("dienTich").innerHTML = showDienTich;
+};
+//Tính chu vi
+document.getElementById("tinhChuVi").onclick = function () {
+  var chieuDai = document.getElementById("chieuDai").value;
+  var chieuRong = document.getElementById("chieuRong").value;
+  var chuVi = (Number(chieuDai) + Number(chieuRong)) * 2;
+  var showChuVi = "";
+  showChuVi = "Chu vi = " + chuVi;
+  document.getElementById("chuVi").innerHTML = showChuVi;
+};
 
 // Bài 5: Tính tổng 2 ký số
-// INPUT: giả sử 2 ký số được nhập là 42
-// PROCESS: B1. Tách số hàng chục theo công thức Math.floor(kySo / 10)
-// B2. Tách số hàng đơn vị theo công thức kySo % 10
-// B3. Gán biến sum = Number1 + Number2 để tính tổng 2 ký số
-// OUTPUT: 4 + 2 = 6
-console.log("Bài 5: Tính tổng 2 ký số");
-var kySo = 42;
-var Number1 = kySo % 10;
-var Number2 = Math.floor(kySo / 10);
-var sum = Number1 + Number2;
-console.log("Số được nhập là: 42");
-console.log("Tổng 2 ký số được nhập =", sum);
+document.getElementById("tong2KySo").onclick = function () {
+  var number = document.getElementById("number").value;
+  var kySo1 = number % 10;
+  var kySo2 = Math.floor(number / 10);
+  var sumNumber = kySo1 + kySo2;
+  var showSumNumber = "";
+  showSumNumber = "Tổng 2 ký số của số được nhập = " + sumNumber;
+  document.getElementById("thongBaoKetQua").innerHTML = showSumNumber;
+};

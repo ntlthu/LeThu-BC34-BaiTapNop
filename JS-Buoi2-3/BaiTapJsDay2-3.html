@@ -28,7 +28,7 @@
         </div>
         <div class="card-body">
           <div class="form-group">
-            <p>Số ngày làm</p>
+            <p>Số ngày làm :</p>
             <input type="" class="form-control" id="soNgayLam" />
           </div>
         </div>
@@ -70,7 +70,7 @@
     </div>
 
     <!-- Bài tập 3 -->
-    <h3>Bài 3: Quy đổi tiền</h3>
+    <h3 class="mt-3">Bài 3: Quy đổi tiền</h3>
     <div class="d-flex justify-content-center">
       <div class="card w-50">
         <div class="card-header bg-info text-dark text-center">
@@ -86,6 +86,63 @@
         <div class="card-footer text-center">
           <button class="btn btn-info" id="moneyExchange">Quy đổi</button>
           <div class="mt-3" id="totalMoney"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bài tập 4 -->
+    <h3 class="mt-3">Bài 4: Tính diện tích, chu vi hình chữ nhật</h3>
+    <div class="d-flex justify-content-center">
+      <div class="card w-50">
+        <div class="card-header bg-danger text-white text-center">
+          Diện tích, chu vi hình chữ nhật
+        </div>
+        <div class="card-body">
+          <img
+            class="w-25 mb-4"
+            src="https://donghanhchocuocsongtotdep.vn/wp-content/uploads/2021/07/chu-vi-hinh-chu-nhat-nhat.jpg"
+            alt=""
+          />
+          <div class="form-group">
+            <p>Chiều Dài :</p>
+            <input type="number" class="form-control" id="chieuDai" />
+            <br />
+            <p>Chiều Rộng:</p>
+            <input type="number" class="form-control" id="chieuRong" />
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-danger" id="tinhDienTich">
+            Tính Diện tích
+          </button>
+          <button class="btn btn-danger" id="tinhChuVi">Tính Chu Vi</button>
+          <div class="mt-3" id="dienTich"></div>
+          <div class="mt-3" id="chuVi"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bài 5: Tính tổng 2 ký số -->
+    <h3 class="mt-3">Bài 5: Tính tổng 2 ký số được nhập vào</h3>
+    <div class="d-flex justify-content-center">
+      <div class="card w-50">
+        <div class="card-header bg-warning text-dark text-center">
+          Tính tổng 2 ký số được nhập vào
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <p>Number</p>
+            <input
+              type=""
+              class="form-control"
+              id="number"
+              placeholder="Nhập vào 1 số có 2 chữ số"
+            />
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-warning" id="tong2KySo">Tổng 2 ký số</button>
+          <div class="mt-3" id="thongBaoKetQua"></div>
         </div>
       </div>
     </div>
