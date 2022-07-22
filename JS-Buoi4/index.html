@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+
+    <h3>Bai tap 1</h3>
+    <div class="input-group input-group-sm mb-3 d-flex">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Số 1</span>
+        <input id="num1" type="number" class="form-control me-3" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Số 2</span>
+        <input id="num2" type="number" class="form-control me-3" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Số 3</span>
+        <input id="num3" type="number" class="form-control me-3" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+
+        
+ 
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" id="btnCount" onclick="sapXepSo()">Sắp xếp</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="resultBai1"></span>
+        </div>
+      </div>
+
+      <h3>Bai tap 2</h3>
+      <form class="row gy-3 align-items-center px-2">
+        <div class="form-group col-12 col-lg-4">
+            <select class="form-control form__input" name="" id="selUser">
+                <option value="">Chọn thành viên</option>
+                <option value="B">Bố</option>
+                <option value="M">Mẹ</option>
+                <option value="A">Anh Trai</option>
+                <option value="E">Em Gái</option>
+            </select>
+        </div>
+        <div class="col-12 col-lg-4">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="goiLoiChao()">Gửi lời
+                chào</button>
+        </div>
+        <div  class="alert alert-success" role="alert">
+            👉<span id="resultBai2"></span>
+        </div>
+    </form>
+
+    <h3>Bai tap 3</h3>
+    <form class="row gy-3 align-items-center px-2">
+        <div class="col-12 col-lg-4">
+            <input type="text" class="form-control form__input" id="inputCount1"
+                placeholder="Nhập số thứ 1">
+        </div>
+        <div class="col-12 col-lg-4">
+            <input type="text" class="form-control form__input" id="inputCount2"
+                placeholder="Nhập số thứ 2">
+        </div>
+        <div class="col-12 col-lg-4">
+            <input type="text" class="form-control form__input" id="inputCount3"
+                placeholder="Nhập số thứ 3">
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" id="btnCount" onclick="demChanLe()">Đếm</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="resultBai3"></span>
+        </div>
+    </form>
+
+
+    <h3>Bai Tap 4</h3>
+    <form class="row gy-3 align-items-center px-2">
+        <div class="col-12 col-lg-4">
+            <input type="text" class="form-control form__input" id="inputEdge1"
+                placeholder="Nhập độ dài cạnh 1">
+        </div>
+        <div class="col-12 col-lg-4">
+            <input type="text" class="form-control form__input" id="inputEdge2"
+                placeholder="Nhập độ dài cạnh 2">
+        </div>
+        <div class="col-12 col-lg-4">
+            <input type="text" class="form-control form__input" id="inputEdge3"
+                placeholder="Nhập độ dài cạnh 3">
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" id="btnEdge" onclick="xacDinhTamGiac()">Dự
+                Đoán</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="resultBai4"></span>
+        </div>
+    </form>
+    </div>
+
+
+    
+
+
+      
+</body>
+</html>
